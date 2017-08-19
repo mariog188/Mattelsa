@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MattelsaService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:58457/MattelsaService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:58457/MattelsaService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:58457/MattelsaService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Mattelsa.Modelo" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMattelsa_ConfigurarConexion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConfigurarConexion" />
+  </wsdl:message>
+  <wsdl:message name="IMattelsa_ConfigurarConexion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConfigurarConexionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMattelsa_Guardar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Guardar" />
+  </wsdl:message>
+  <wsdl:message name="IMattelsa_Guardar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMattelsa_CargarTipo_InputMessage">
+    <wsdl:part name="parameters" element="tns:CargarTipo" />
+  </wsdl:message>
+  <wsdl:message name="IMattelsa_CargarTipo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CargarTipoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMattelsa_CargarEmpleados_InputMessage">
+    <wsdl:part name="parameters" element="tns:CargarEmpleados" />
+  </wsdl:message>
+  <wsdl:message name="IMattelsa_CargarEmpleados_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CargarEmpleadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMattelsa_CargarEmpleado_InputMessage">
+    <wsdl:part name="parameters" element="tns:CargarEmpleado" />
+  </wsdl:message>
+  <wsdl:message name="IMattelsa_CargarEmpleado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CargarEmpleadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMattelsa_CargarPlaca_InputMessage">
+    <wsdl:part name="parameters" element="tns:CargarPlaca" />
+  </wsdl:message>
+  <wsdl:message name="IMattelsa_CargarPlaca_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CargarPlacaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMattelsa_GuardarCelda_InputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarCelda" />
+  </wsdl:message>
+  <wsdl:message name="IMattelsa_GuardarCelda_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarCeldaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMattelsa_CargarCelda_InputMessage">
+    <wsdl:part name="parameters" element="tns:CargarCelda" />
+  </wsdl:message>
+  <wsdl:message name="IMattelsa_CargarCelda_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CargarCeldaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IMattelsa">
+    <wsdl:operation name="ConfigurarConexion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMattelsa/ConfigurarConexion" message="tns:IMattelsa_ConfigurarConexion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMattelsa/ConfigurarConexionResponse" message="tns:IMattelsa_ConfigurarConexion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Guardar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMattelsa/Guardar" message="tns:IMattelsa_Guardar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMattelsa/GuardarResponse" message="tns:IMattelsa_Guardar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CargarTipo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMattelsa/CargarTipo" message="tns:IMattelsa_CargarTipo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMattelsa/CargarTipoResponse" message="tns:IMattelsa_CargarTipo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CargarEmpleados">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMattelsa/CargarEmpleados" message="tns:IMattelsa_CargarEmpleados_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMattelsa/CargarEmpleadosResponse" message="tns:IMattelsa_CargarEmpleados_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CargarEmpleado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMattelsa/CargarEmpleado" message="tns:IMattelsa_CargarEmpleado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMattelsa/CargarEmpleadoResponse" message="tns:IMattelsa_CargarEmpleado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CargarPlaca">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMattelsa/CargarPlaca" message="tns:IMattelsa_CargarPlaca_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMattelsa/CargarPlacaResponse" message="tns:IMattelsa_CargarPlaca_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarCelda">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMattelsa/GuardarCelda" message="tns:IMattelsa_GuardarCelda_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMattelsa/GuardarCeldaResponse" message="tns:IMattelsa_GuardarCelda_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CargarCelda">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMattelsa/CargarCelda" message="tns:IMattelsa_CargarCelda_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMattelsa/CargarCeldaResponse" message="tns:IMattelsa_CargarCelda_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IMattelsa" type="tns:IMattelsa">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ConfigurarConexion">
+      <soap:operation soapAction="http://tempuri.org/IMattelsa/ConfigurarConexion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Guardar">
+      <soap:operation soapAction="http://tempuri.org/IMattelsa/Guardar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarTipo">
+      <soap:operation soapAction="http://tempuri.org/IMattelsa/CargarTipo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarEmpleados">
+      <soap:operation soapAction="http://tempuri.org/IMattelsa/CargarEmpleados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarEmpleado">
+      <soap:operation soapAction="http://tempuri.org/IMattelsa/CargarEmpleado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarPlaca">
+      <soap:operation soapAction="http://tempuri.org/IMattelsa/CargarPlaca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarCelda">
+      <soap:operation soapAction="http://tempuri.org/IMattelsa/GuardarCelda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarCelda">
+      <soap:operation soapAction="http://tempuri.org/IMattelsa/CargarCelda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MattelsaService">
+    <wsdl:port name="BasicHttpBinding_IMattelsa" binding="tns:BasicHttpBinding_IMattelsa">
+      <soap:address location="http://localhost:58457/MattelsaService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

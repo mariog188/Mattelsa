@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Mattelsa.Modelo" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Mattelsa.Modelo" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Vehiculo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CedulaEmpleado" type="xs:long" />
+      <xs:element minOccurs="0" name="Cilindraje" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fotografia" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="IdTipoVehiculo" type="xs:long" />
+      <xs:element minOccurs="0" name="Modelo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Placa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Puertas" type="xs:long" />
+      <xs:element minOccurs="0" name="Tiempos" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Vehiculo" nillable="true" type="tns:Vehiculo" />
+  <xs:complexType name="ArrayOfTipoVehiculo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TipoVehiculo" nillable="true" type="tns:TipoVehiculo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTipoVehiculo" nillable="true" type="tns:ArrayOfTipoVehiculo" />
+  <xs:complexType name="TipoVehiculo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TipoVehiculo" nillable="true" type="tns:TipoVehiculo" />
+  <xs:complexType name="ArrayOfEmpleado">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Empleado" nillable="true" type="tns:Empleado" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEmpleado" nillable="true" type="tns:ArrayOfEmpleado" />
+  <xs:complexType name="Empleado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Apellido" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cedula" type="xs:long" />
+      <xs:element minOccurs="0" name="Edad" type="xs:long" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Empleado" nillable="true" type="tns:Empleado" />
+  <xs:complexType name="ArrayOfVehiculo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Vehiculo" nillable="true" type="tns:Vehiculo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVehiculo" nillable="true" type="tns:ArrayOfVehiculo" />
+  <xs:complexType name="Celda">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cedula" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaHoraIngreso" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:long" />
+      <xs:element minOccurs="0" name="PlacaVehiculo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SitioParqueo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Celda" nillable="true" type="tns:Celda" />
+  <xs:complexType name="ArrayOfCelda">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Celda" nillable="true" type="tns:Celda" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCelda" nillable="true" type="tns:ArrayOfCelda" />
+</xs:schema>
